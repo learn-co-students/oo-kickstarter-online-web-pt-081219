@@ -1,5 +1,3 @@
-require 'pry-byebug'
-
 class Project
   attr_reader :title, :backers
 
@@ -10,7 +8,6 @@ class Project
 
   def add_backer(backer)
     @backers << backer
-    # backer.backed_projects << self
     unless backer.backed_projects.include?(self)
       backer.backed_projects << self
     end
